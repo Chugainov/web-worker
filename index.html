@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Web worker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+    .visually-hidden {
+      position: absolute;
+      clip: rect(0 0 0 0);
+    }
+  </style>
+</head>
+
+<body class="shower list">
+  <header class="caption">
+    <h1>Как посторить дом, если ты — веб-воркер</h1>
+    <p>Кирилл Чугаинов, iTechArt</p>
+  </header>
+
+  <section class="slide clear" id="cover">
+    <h2 class="shout">Как посторить дом,<br> если ты — веб-воркер?</h2>
+    <figure>
+      <img class="cover" src="" alt="Обложка доклада">
+    </figure>
+    <style>
+      #cover h2 {
+        background-color: black;
+        color: white;
+        font-size: 75px;
+        padding: .2em;
+      }
+    </style>
+  </section>
+
+  <section class="slide clear">
+    <h2 style="margin-left: 350px;">Кирилл Чугаинов</h2>
+    <ul style="margin-left: 400px;">
+      <li>Веб-разработчик в iTechArt</li>
+      <img src="pictures/kirill_edited.jpg" alt="Фотография спикера" class="place left cover height z-top">
+    </ul>
+  </section>
+
+  <section class="slide clear" id="podcast">
+    <figure>
+      <img class="cover place top" src="pictures/podcast.PNG" alt="Скриншот подкаста Frontend weekend">
+    </figure>
+    <h2 class="place bottom height z-top">11:03</h2>
+    <style>
+      #podcast h2 {
+        background-color: black;
+        color: white;
+        font-size: 75px;
+        padding: .2em;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout">???</h2>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout" style="font-size: 100px;">JS - однопоточный</h2>
+  </section>
+
+  <section class="slide" id="render">
+    <h2>Схема рендера в браузере</h2>
+    <figure>
+      <img class="place center bottom" src="pictures/render.png" alt="Схема рендеринга в браузере">
+    </figure>
+  </section>
+
+  <section class="slide" id="render">
+    <h2>Схема рендера в браузере</h2>
+    <figure>
+      <img class="place center bottom" src="pictures/render with JS.png" alt="Схема рендеринга в браузере и JS">
+    </figure>
+  </section>
+
+  <section class="slide clear" style="background-color: black; ">
+    <video src="./pictures/js call stack.mp4" class="cover height" autoplay="" muted="" playsinline=""></video>    
+  </section>
+
+  <section class="slide clear" style="background-color: black; ">
+    <video src="./pictures/js call stack + render.mp4" class="cover height" autoplay="" muted="" playsinline=""></video>    
+  </section>
+
+  <section class="slide">
+    <h2>Почему вы не используете <br>сервис-воркеры?</h2>
+    <ol>
+      <li class="next">Ну мы используем, но так, там картинки вроде закэшировали...</li>
+      <li class="next">А что это?</li>
+      <li class="next">По-моему это слишком сложно!</li>
+      <li class="next">Они нестабильны и мало где поддерживаются.</li>
+      <li class="next">Мы вообще на Python пишем, чё ты пристал к нам? Ходит тут, вопросы спрашивает постоянно!</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <a href="https://twitter.com/Chugainovkirill" class="place" style="font-size: 60px;">@Chugainovkirill</a>
+  </section>
+  
+  <section class="slide">
+    <h2 class="shout">Спасибо за внимание!</h2>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout">Вопросы?</h2>
+  </section>
+  
+  <div class="progress"></div>
+
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+
+</body>
+
+</html>
