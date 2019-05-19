@@ -71,14 +71,14 @@
   </section>
 
   <section class="slide" id="render">
-    <h2>Схема рендера в браузере</h2>
+    <h2>Конвеер рендера</h2>
     <figure>
       <img class="place center bottom" src="pictures/render.png" alt="Схема рендеринга в браузере">
     </figure>
   </section>
 
   <section class="slide" id="render">
-    <h2>Схема рендера в браузере</h2>
+    <h2>Конвеер рендера</h2>
     <figure>
       <img class="place center bottom" src="pictures/render with JS.png" alt="Схема рендеринга в браузере и JS">
     </figure>
@@ -92,15 +92,129 @@
     <video src="./pictures/js call stack + render.mp4" class="cover height" autoplay="" muted="" playsinline=""></video>    
   </section>
 
+  <section class="slide clear">
+    <h2>Веб-работяга</h2>
+    <ul style="margin-right: 300px;">
+      <li class="next">Работы любой сложности</li>
+      <li class="next">Легко сотрудничать</li>
+    </ul>
+    <img src="pictures/веб-работяга.jpg" alt="Фотография рабочего" class="place right cover height z-top">
+  </section>
+
+  <section class="slide" id="render">
+    <h2>Внутри кода</h2>
+    <pre>
+      <code>const myWorker = new Worker(<mark>'worker.js'</mark>);</code>
+      <code>...</code>
+      <code>myWorker.postMessage(args);</code>
+      <code>...</code>
+      <code>myWorker.addEventListener('message', (e) => {<mark>...</mark>}, false);</code>
+    </pre>
+  </section>
+  
+  <section class="slide" id="render">
+    <h2>Внутри файла воркера</h2>
+    <pre>
+      <code>self.addEventListener('message', function(e) {</code>
+      <code>...</code>
+      <code>self.postMessage(result);</code>
+      <code>...</code>
+      <code>}, false);</code>
+    </pre>
+  </section>
+  
+  <section class="slide" id="render">
+    <div class="place">
+      <blockquote class="twitter-tweet" data-lang="ru">
+        <p lang="en" dir="ltr">
+          We believe getting your JavaScript off the main thread is critical to achieving good performance 💪
+          <br><br>
+          But `postMessage` is annoying...? 
+          Don&#39;t worry, Comlink makes you forget about  postMessage so you can enjoy using Web Workers🌈
+          <a href="https://t.co/fYPYg3jKHS">https://t.co/fYPYg3jKHS</a>
+        </p>&mdash; Chrome Developers (@ChromiumDev)
+        <a href="https://twitter.com/ChromiumDev/status/1126700891585880064?ref_src=twsrc%5Etfw">10 мая 2019 г.</a>
+      </blockquote>
+    </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </section>
+
+  <section class="slide clear">
+    <h2>Веб-работяга</h2>
+    <ul style="margin-right: 300px;">
+      <li>Работы любой сложности</li>
+      <li>Легко сотрудничать</li>
+      <li>Работает в самых тяжёлых условиях</li>
+    </ul>
+    <img src="pictures/веб-работяга.jpg" alt="Фотография рабочего" class="place right cover height z-top">
+  </section>
+
+  <section class="slide clear" id="canIUse">
+    <figure>
+      <img class="cover" src="pictures/can i use.PNG" alt="Скриншот can i use с очень хорошей поддержкой">
+    </figure>
+    <style>
+      #canIUse {
+        background-color: #F2E8D5;
+      }
+    </style>
+  </section>
+
+  <section class="slide clear" style="background-color: black; ">
+    <video src="./pictures/load without block.mp4" class="cover height" autoplay="" muted="" playsinline=""></video>    
+  </section>
+
+  <section class="slide clear" style="background-color: black; ">
+    <video src="./pictures/load with blocker.mp4" class="cover height" autoplay="" muted="" playsinline=""></video>    
+  </section>
+
+  <section class="slide clear" style="background-color: black; ">
+    <video src="./pictures/load without block.mp4" class="cover height" autoplay="" muted="" playsinline=""></video>    
+  </section>
+  
   <section class="slide">
-    <h2>Почему вы не используете <br>сервис-воркеры?</h2>
-    <ol>
-      <li class="next">Ну мы используем, но так, там картинки вроде закэшировали...</li>
-      <li class="next">А что это?</li>
-      <li class="next">По-моему это слишком сложно!</li>
-      <li class="next">Они нестабильны и мало где поддерживаются.</li>
-      <li class="next">Мы вообще на Python пишем, чё ты пристал к нам? Ходит тут, вопросы спрашивает постоянно!</li>
-    </ol>
+    <h2 class='shout' style="font-size: 100px;">Потокобезопасность</h2>
+  </section>
+
+  <section class="slide">
+    <h2 class='shout' style="font-size: 100px;">Веб-работяга не может взаимодействовать с DOM</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Virtual DOM</h2>
+    <figure>
+      <img height="300px" width="auto" class="place bottom" src="pictures/treehouse.png" alt="Дерево ДОМ">
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Virtual DOM</h2>
+    <figure>
+      <img height="300px" width="auto" class="place left bottom" src="pictures/treehouse.png" alt="Дерево ДОМ">
+      <img height="300px" width="auto" class="place right bottom" src="pictures/treehouse.png" alt="Дерево ДОМ">
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Virtual DOM</h2>
+    <figure>
+      <img height="300px" width="auto" class="place left bottom" src="pictures/treehouse circle.png" alt="Дерево ДОМ">
+      <img height="300px" width="auto" class="place bottom" src="pictures/arrow.png" alt="Стрелка вправо">
+      <img height="300px" width="auto" class="place right bottom" src="pictures/treehouse.png" alt="Дерево ДОМ">
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Virtual DOM</h2>
+    <figure>
+      <img height="300px" width="auto" class="place left bottom" src="pictures/treehouse circle.png" alt="Дерево ДОМ">
+      <img height="300px" width="auto" class="place bottom" src="pictures/arrow.png" alt="Стрелка вправо">
+      <img height="300px" width="auto" class="place right bottom" src="pictures/treehouse circle.png" alt="Дерево ДОМ">
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2 class='shout'>Разница</h2>
   </section>
 
   <section class="slide">
