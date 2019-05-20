@@ -20,14 +20,14 @@
 
 <body class="shower list">
   <header class="caption">
-    <h1>Как посторить дом, если ты — веб-воркер</h1>
+    <h1>Как построить дом, если ты — веб-воркер</h1>
     <p>Кирилл Чугаинов, iTechArt</p>
   </header>
 
   <section class="slide clear" id="cover">
-    <h2 class="shout">Как посторить дом,<br> если ты — веб-воркер?</h2>
+    <h2 class="shout">Как построить дом,<br> если ты — веб-воркер?</h2>
     <figure>
-      <img class="cover" src="" alt="Обложка доклада">
+      <img class="cover" src="pictures/wall.jpg" alt="Обложка доклада">
     </figure>
     <style>
       #cover h2 {
@@ -66,21 +66,46 @@
     <h2 class="shout">???</h2>
   </section>
 
+  <section class="slide clear">
+    <figure>
+      <img class="cover" src="pictures/developers.png" alt="Мем 'кто мы?'">
+    </figure>
+  </section>
+
+  <section class="slide clear">
+    <figure>
+      <img class="cover" src="pictures/fast sites.png" alt="Мем 'кто мы?'">
+    </figure>
+  </section>
+  
+  <section class="slide clear">
+    <figure>
+      <img class="cover" height="100%" width="auto" src="pictures/garold.png" alt="Типичный дизайнер">
+    </figure>
+  </section>
+
   <section class="slide">
     <h2 class="shout" style="font-size: 100px;">JS - однопоточный</h2>
   </section>
 
-  <section class="slide" id="render">
+  <section class="slide">
     <h2>Конвеер рендера</h2>
     <figure>
-      <img class="place center bottom" src="pictures/render.png" alt="Схема рендеринга в браузере">
+      <img class="place center" src="pictures/render.png" alt="Схема рендеринга в браузере">
     </figure>
   </section>
 
-  <section class="slide" id="render">
+  <section class="slide">
     <h2>Конвеер рендера</h2>
     <figure>
-      <img class="place center bottom" src="pictures/render with JS.png" alt="Схема рендеринга в браузере и JS">
+      <img class="place center" src="pictures/render with JS.png" alt="Схема рендеринга в браузере и JS">
+    </figure>
+  </section>
+  
+  <section class="slide">
+    <h2>Отдельный поток</h2>
+    <figure>
+      <img width="800" height="auto" class="place center bottom" src="pictures/worker thread.png" alt="Вынос логики в другой поток">
     </figure>
   </section>
 
@@ -101,7 +126,7 @@
     <img src="pictures/веб-работяга.jpg" alt="Фотография рабочего" class="place right cover height z-top">
   </section>
 
-  <section class="slide" id="render">
+  <section class="slide">
     <h2>Внутри кода</h2>
     <pre>
       <code>const myWorker = new Worker(<mark>'worker.js'</mark>);</code>
@@ -112,7 +137,7 @@
     </pre>
   </section>
   
-  <section class="slide" id="render">
+  <section class="slide">
     <h2>Внутри файла воркера</h2>
     <pre>
       <code>self.addEventListener('message', function(e) {</code>
@@ -123,7 +148,7 @@
     </pre>
   </section>
   
-  <section class="slide" id="render">
+  <!-- <section class="slide">
     <div class="place">
       <blockquote class="twitter-tweet" data-lang="ru">
         <p lang="en" dir="ltr">
@@ -137,7 +162,7 @@
       </blockquote>
     </div>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </section>
+  </section> -->
 
   <section class="slide clear">
     <h2>Веб-работяга</h2>
@@ -175,42 +200,34 @@
   <section class="slide">
     <h2 class='shout' style="font-size: 100px;">Потокобезопасность</h2>
   </section>
+  
+  <section class="slide">
+    <h2>Потокобезопасность</h2>
+    <figure>
+      <img width="800" height="auto" class="place center bottom" src="pictures/threadsafety.png" alt="Схема влияния двух потоков на один объект">
+    </figure>
+  </section>
+
+  <section class="slide clear">
+    <figure>
+      <img class="cover" src="pictures/LRSH.jpg" alt="Лебедь рак и щука тянут воз">
+    </figure>
+  </section>
+
+  <section class="slide" id="PM1">
+    <h2 class='shout' style="font-size: 80px;">postMessage(msg);</h2>
+  </section>
+
+  <section class="slide" id="PM2">
+    <h2 class='shout' style="font-size: 80px;">postMessage(msg, [transfer]);</h2>
+  </section>
+
+  <section class="slide">
+    <h2 class='shout' style="font-size: 80px;">DOM не потокобезопасен</h2>
+  </section>
 
   <section class="slide">
     <h2 class='shout' style="font-size: 100px;">Веб-работяга не может взаимодействовать с DOM</h2>
-  </section>
-
-  <section class="slide">
-    <h2>Virtual DOM</h2>
-    <figure>
-      <img height="300px" width="auto" class="place bottom" src="pictures/treehouse.png" alt="Дерево ДОМ">
-    </figure>
-  </section>
-
-  <section class="slide">
-    <h2>Virtual DOM</h2>
-    <figure>
-      <img height="300px" width="auto" class="place left bottom" src="pictures/treehouse.png" alt="Дерево ДОМ">
-      <img height="300px" width="auto" class="place right bottom" src="pictures/treehouse.png" alt="Дерево ДОМ">
-    </figure>
-  </section>
-
-  <section class="slide">
-    <h2>Virtual DOM</h2>
-    <figure>
-      <img height="300px" width="auto" class="place left bottom" src="pictures/treehouse circle.png" alt="Дерево ДОМ">
-      <img height="300px" width="auto" class="place bottom" src="pictures/arrow.png" alt="Стрелка вправо">
-      <img height="300px" width="auto" class="place right bottom" src="pictures/treehouse.png" alt="Дерево ДОМ">
-    </figure>
-  </section>
-
-  <section class="slide">
-    <h2>Virtual DOM</h2>
-    <figure>
-      <img height="300px" width="auto" class="place left bottom" src="pictures/treehouse circle.png" alt="Дерево ДОМ">
-      <img height="300px" width="auto" class="place bottom" src="pictures/arrow.png" alt="Стрелка вправо">
-      <img height="300px" width="auto" class="place right bottom" src="pictures/treehouse circle.png" alt="Дерево ДОМ">
-    </figure>
   </section>
 
   <section class="slide">
