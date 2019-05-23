@@ -155,9 +155,9 @@
     <h2>Внутри кода</h2>
     <pre>
       <code>const myWorker = new Worker(<mark>'worker.js'</mark>);</code>
-      <code>...</code>
-      <code>myWorker.postMessage(args);</code>
-      <code>...</code>
+      <code>  ...</code>
+      <code>  myWorker.postMessage(args);</code>
+      <code>  ...</code>
       <code>myWorker.addEventListener('message', (e) => {<mark>...</mark>}, false);</code>
     </pre>
   </section>
@@ -166,9 +166,9 @@
     <h2>Внутри файла работяги</h2>
     <pre>
       <code>self.addEventListener('message', function(e) {</code>
-      <code>...</code>
-      <code>self.postMessage(result);</code>
-      <code>...</code>
+      <code>  ...</code>
+      <code>  self.postMessage(result);</code>
+      <code>  ...</code>
       <code>}, false);</code>
     </pre>
   </section>
